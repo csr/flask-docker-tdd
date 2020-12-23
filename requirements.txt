@@ -11,3 +11,5 @@ pyrsistent==0.17.3
 pytz==2020.4
 six==1.15.0
 Werkzeug==1.0.1
+Flask-SQLAlchemy==2.4.4
+psycopg2-binary==2.8.6
