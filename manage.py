@@ -3,13 +3,15 @@
 
 from flask.cli import FlaskGroup
 
-from src import app, db
+from src import create_app, db
+from src.api.models import User
 
 
-cli = FlaskGroup(app)
+app = create_app()
+cli = FlaskGroup(create_app=create_app)
 
 
-@cli.command('recreate.db')
+@cli.command('recreate_db')
 def recreate_db():
     db.drop_all()
     db.create_all()
